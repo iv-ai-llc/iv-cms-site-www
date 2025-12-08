@@ -44,11 +44,19 @@ interface RevalidatePayload {
 
 export async function POST(request: NextRequest) {
   try {
-    // Verify secret
+    // Verify secret - FAIL CLOSED: reject if secret is not configured
     const secret = request.headers.get("x-revalidate-secret");
     const expectedSecret = process.env.REVALIDATE_SECRET;
 
-    if (expectedSecret && secret !== expectedSecret) {
+    if (!expectedSecret) {
+      console.error("[Revalidate] REVALIDATE_SECRET not configured - rejecting request");
+      return NextResponse.json(
+        { error: "Revalidation not configured" },
+        { status: 503 }
+      );
+    }
+
+    if (secret !== expectedSecret) {
       return NextResponse.json(
         { error: "Invalid secret" },
         { status: 401 }
