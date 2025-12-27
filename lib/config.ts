@@ -6,6 +6,9 @@
  * or be hardcoded as defaults.
  */
 
+// Platform URL for authentication redirects
+const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "";
+
 export const siteConfig = {
   // Site name displayed in header, footer, and metadata
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Site Name",
@@ -18,6 +21,14 @@ export const siteConfig = {
 
   // Keywords for SEO
   keywords: ["solutions", "enterprise", "consulting"],
+
+  // Platform URLs for authentication (external links to platform)
+  platform: {
+    url: platformUrl,
+    signIn: platformUrl ? `${platformUrl}/sign-in` : null,
+    signUp: platformUrl ? `${platformUrl}/sign-up` : null,
+    dashboard: platformUrl ? `${platformUrl}/dashboard` : null,
+  },
 
   // Navigation items - customize for your site
   navigation: [

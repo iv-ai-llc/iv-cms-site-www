@@ -106,14 +106,14 @@ export async function POST(request: NextRequest) {
 
         default:
           // Generic collection - revalidate by tag if available
-          revalidateTag(collectionSlug, "max");
+          revalidateTag(collectionSlug);
           revalidated.push(`tag:${collectionSlug}`);
       }
 
     } else if (type === "collection") {
       // Collection schema changed - revalidate all items
       if (collectionSlug) {
-        revalidateTag(collectionSlug, "max");
+        revalidateTag(collectionSlug);
         revalidated.push(`tag:${collectionSlug}`);
       }
 

@@ -99,6 +99,24 @@ export function Header() {
               <Globe className="w-5 h-5" />
             </button>
 
+            {/* Auth buttons - link to platform */}
+            {siteConfig.platform.signIn && (
+              <a
+                href={siteConfig.platform.signIn}
+                className="hidden md:inline-flex px-4 py-2 text-sm font-medium text-[rgb(var(--foreground))] hover:text-primary-500 transition-colors"
+              >
+                Sign In
+              </a>
+            )}
+            {siteConfig.platform.signUp && (
+              <a
+                href={siteConfig.platform.signUp}
+                className="hidden md:inline-flex px-4 py-2 text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors"
+              >
+                Get Started
+              </a>
+            )}
+
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -140,6 +158,30 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+
+          {/* Mobile auth buttons */}
+          {(siteConfig.platform.signIn || siteConfig.platform.signUp) && (
+            <div className="mt-4 pt-4 border-t border-[rgb(var(--border))] flex flex-col gap-2">
+              {siteConfig.platform.signIn && (
+                <a
+                  href={siteConfig.platform.signIn}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg text-base font-medium text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] hover:bg-[rgb(var(--foreground))]/5 transition-colors"
+                >
+                  Sign In
+                </a>
+              )}
+              {siteConfig.platform.signUp && (
+                <a
+                  href={siteConfig.platform.signUp}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg text-base font-medium text-white bg-primary-500 hover:bg-primary-600 text-center transition-colors"
+                >
+                  Get Started
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </header>
