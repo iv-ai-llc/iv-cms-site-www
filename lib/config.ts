@@ -11,16 +11,16 @@ const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "";
 
 export const siteConfig = {
   // Site name displayed in header, footer, and metadata
-  name: process.env.NEXT_PUBLIC_SITE_NAME || "Site Name",
+  name: process.env.NEXT_PUBLIC_SITE_NAME || "IV-CMS",
 
   // Short tagline for the site
-  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || "Your tagline here",
+  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || "Modern Headless CMS",
 
   // Site description for SEO
-  description: "Enterprise solutions that drive results.",
+  description: "A modern, headless content management system for managing content across multiple sites with AI-powered editing and real-time collaboration.",
 
   // Keywords for SEO
-  keywords: ["solutions", "enterprise", "consulting"],
+  keywords: ["cms", "headless cms", "content management", "ai editor", "multi-site", "nextjs"],
 
   // Platform URLs for authentication (external links to platform)
   platform: {
@@ -33,31 +33,28 @@ export const siteConfig = {
   // Navigation items - customize for your site
   navigation: [
     { href: "/", label: "Home" },
+    { href: "/capabilities", label: "Features" },
     { href: "/about", label: "About" },
-    { href: "/capabilities", label: "Capabilities" },
-    { href: "/solutions", label: "Solutions" },
-    { href: "/perspectives", label: "Perspectives" },
     { href: "/contact", label: "Contact" },
   ],
 
   // Footer links
   footer: {
+    product: [
+      { label: "Features", href: "/capabilities" },
+      { label: "Pricing", href: "/contact" },
+      { label: "API Docs", href: "/docs" },
+    ],
     company: [
       { label: "About", href: "/about" },
-      { label: "Capabilities", href: "/capabilities" },
-      { label: "Solutions", href: "/solutions" },
       { label: "Contact", href: "/contact" },
-    ],
-    resources: [
-      { label: "Perspectives", href: "/perspectives" },
-      { label: "Case Studies", href: "/solutions" },
+      { label: "GitHub", href: "https://github.com/iv-ai-llc/iv-cms-platform" },
     ],
   },
 
   // Social links
   social: {
-    email: "contact@example.com",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    email: "support@iv-cms.space",
+    github: "https://github.com/iv-ai-llc/iv-cms-platform",
   },
 };

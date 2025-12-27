@@ -15,100 +15,100 @@ import { fetchPage, isCMSConfigured } from "@/lib/cms";
  */
 const staticContent = {
   hero: {
-    subtitle: "Your Tagline Here",
-    title: "Your Main Headline Goes Here",
+    subtitle: "Modern Headless CMS",
+    title: "Content Management, Simplified",
     description:
-      "A compelling description of your value proposition that resonates with your target audience.",
-    ctaText: "Get Started",
-    ctaHref: "/contact",
+      "A powerful headless CMS built for modern teams. Manage content across multiple sites with AI-powered editing, real-time collaboration, and seamless API delivery.",
+    ctaText: "Start Free",
+    ctaHref: "/sign-up",
     secondaryCta: {
-      text: "Learn More",
+      text: "View Features",
       href: "/capabilities",
     },
   },
   features: {
-    title: "What We Deliver",
-    subtitle: "Capabilities",
+    title: "Everything You Need",
+    subtitle: "Platform Features",
     items: [
       {
         icon: "automate",
-        title: "Feature One",
+        title: "AI-Powered Editor",
         description:
-          "Description of your first key feature or capability that provides value to customers.",
+          "Write faster with AI assistance. Generate content, improve copy, and translate text with built-in AI tools.",
       },
       {
         icon: "accelerate",
-        title: "Feature Two",
+        title: "Multi-Site Management",
         description:
-          "Description of your second key feature that differentiates you from competitors.",
+          "Manage content for multiple websites from a single dashboard. Share collections across sites or keep them separate.",
       },
       {
         icon: "augment",
-        title: "Feature Three",
+        title: "Headless API",
         description:
-          "Description of your third feature that addresses customer pain points.",
+          "Deliver content anywhere via our REST API. Built for Next.js, React, and any frontend framework.",
       },
       {
         icon: "transform",
-        title: "Feature Four",
+        title: "Real-Time Preview",
         description:
-          "Description of your fourth feature that showcases innovation.",
+          "See changes instantly with live preview. Edit content and watch it update on your site in real-time.",
       },
       {
         icon: "anticipate",
-        title: "Feature Five",
+        title: "Flexible Collections",
         description:
-          "Description of your fifth feature that demonstrates expertise.",
+          "Create custom content types with flexible schemas. Blog posts, products, team members - define any structure.",
       },
       {
         icon: "amplify",
-        title: "Feature Six",
+        title: "Media Management",
         description:
-          "Description of your sixth feature that drives results.",
+          "Upload, organize, and optimize images and files. Automatic resizing and CDN delivery included.",
       },
     ],
   },
   stats: {
-    title: "Results That Matter",
+    title: "Built for Performance",
     description:
-      "Key metrics that demonstrate the impact of our solutions.",
+      "IV-CMS is designed for speed, reliability, and developer experience.",
     items: [
-      { value: "40%", label: "Metric One" },
-      { value: "60%", label: "Metric Two" },
-      { value: "3x", label: "Metric Three" },
-      { value: "99%", label: "Metric Four" },
+      { value: "<50ms", label: "API Response Time" },
+      { value: "99.9%", label: "Uptime SLA" },
+      { value: "10+", label: "Supported Locales" },
+      { value: "Unlimited", label: "API Requests" },
     ],
   },
   pillars: {
-    title: "Our Approach",
-    subtitle: "Three Pillars",
+    title: "Why IV-CMS",
+    subtitle: "Core Principles",
     items: [
       {
         emoji: "🎯",
-        title: "Pillar One",
+        title: "Developer First",
         description:
-          "Description of your first core principle or approach that guides your work.",
+          "Built by developers, for developers. Clean APIs, TypeScript support, and comprehensive documentation.",
       },
       {
         emoji: "🤝",
-        title: "Pillar Two",
+        title: "Content Team Friendly",
         description:
-          "Description of your second principle that builds trust with customers.",
+          "Intuitive editing experience that content teams love. No technical knowledge required to publish.",
       },
       {
         emoji: "🚀",
-        title: "Pillar Three",
+        title: "Scale Without Limits",
         description:
-          "Description of your third principle that drives innovation.",
+          "From startup to enterprise. Built on modern infrastructure that grows with your needs.",
       },
     ],
   },
   cta: {
-    title: "Ready to Get Started?",
+    title: "Ready to Transform Your Content?",
     description:
-      "Let's discuss how we can help you achieve your goals.",
-    buttonText: "Contact Us",
-    buttonHref: "/contact",
+      "Join teams who are already managing their content smarter with IV-CMS.",
+    buttonText: "Get Started Free",
+    buttonHref: "/sign-up",
   },
 };
 

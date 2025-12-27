@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 export function Footer() {
+  const isExternal = (href: string) => href.startsWith("http");
+
   return (
     <footer className="bg-[rgb(var(--surface))] border-t border-[rgb(var(--border))]">
       <div className="container-wide py-12 md:py-16">
@@ -29,15 +31,6 @@ export function Footer() {
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href={siteConfig.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg hover:bg-[rgb(var(--foreground))]/5 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
                 href={siteConfig.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,32 +44,54 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              {siteConfig.footer.company.map((link) => (
+              {siteConfig.footer.product.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {isExternal(link.href) ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {siteConfig.footer.resources.map((link) => (
+              {siteConfig.footer.company.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {isExternal(link.href) ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-[rgb(var(--muted))] hover:text-[rgb(var(--foreground))] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

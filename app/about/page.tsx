@@ -14,10 +14,10 @@ export default function AboutPage() {
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-display-1 font-bold mb-6">
-              <span className="gradient-text">About Us</span>
+              <span className="gradient-text">About IV-CMS</span>
             </h1>
             <p className="text-xl text-[rgb(var(--muted))]">
-              Learn about our mission, values, and the team behind {siteConfig.name}.
+              Building the future of content management with AI-powered tools and developer-first design.
             </p>
           </div>
         </div>
@@ -28,14 +28,16 @@ export default function AboutPage() {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <h2 className="text-display-2 font-bold mb-6">Our Story</h2>
+              <h2 className="text-display-2 font-bold mb-6">Our Mission</h2>
               <p className="text-[rgb(var(--muted))] text-lg leading-relaxed mb-6">
-                Add your company story here. Describe how your organization was founded,
-                what problems you set out to solve, and what drives your team every day.
+                IV-CMS was built to solve a common problem: managing content across multiple
+                websites shouldn&apos;t be complicated. Traditional CMS platforms are either too
+                rigid for developers or too complex for content teams.
               </p>
               <p className="text-[rgb(var(--muted))] text-lg leading-relaxed mb-6">
-                Share your vision for the future and how you plan to continue delivering
-                value to your customers and stakeholders.
+                We created a headless CMS that gives developers the flexibility they need while
+                providing content editors with an intuitive, AI-powered writing experience.
+                Whether you&apos;re managing one site or dozens, IV-CMS scales with your needs.
               </p>
             </div>
           </div>
@@ -45,20 +47,20 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="section bg-[rgb(var(--surface))]">
         <div className="container-wide">
-          <h2 className="text-display-2 font-bold text-center mb-12">Our Values</h2>
+          <h2 className="text-display-2 font-bold text-center mb-12">Our Principles</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                title: "Value One",
-                description: "Description of your first core value that guides your organization.",
+                title: "Developer Experience",
+                description: "Clean APIs, TypeScript support, and comprehensive docs. Build faster with tools you love.",
               },
               {
-                title: "Value Two",
-                description: "Description of your second core value that shapes your culture.",
+                title: "Content Freedom",
+                description: "Define any content structure. No rigid templates - your content, your way.",
               },
               {
-                title: "Value Three",
-                description: "Description of your third core value that drives excellence.",
+                title: "Performance First",
+                description: "Edge-cached API responses under 50ms. Your users deserve fast experiences.",
               },
             ].map((value, index) => (
               <div key={index} className="text-center">
@@ -73,24 +75,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Tech Stack Section */}
       <section className="section">
         <div className="container-wide">
-          <h2 className="text-display-2 font-bold text-center mb-12">Our Team</h2>
+          <h2 className="text-display-2 font-bold text-center mb-12">Built With Modern Tech</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { name: "Team Member 1", role: "Founder & CEO" },
-              { name: "Team Member 2", role: "Head of Product" },
-              { name: "Team Member 3", role: "Lead Engineer" },
-            ].map((member, index) => (
+              { name: "Next.js", role: "React Framework" },
+              { name: "Vercel", role: "Edge Infrastructure" },
+              { name: "TypeScript", role: "Type Safety" },
+              { name: "Clerk", role: "Authentication" },
+              { name: "Upstash", role: "Serverless Data" },
+              { name: "TipTap", role: "Rich Text Editor" },
+            ].map((tech, index) => (
               <div key={index} className="card text-center">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl font-bold text-primary-500">
-                    {member.name.charAt(0)}
+                    {tech.name.charAt(0)}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-[rgb(var(--muted))]">{member.role}</p>
+                <h3 className="text-lg font-semibold">{tech.name}</h3>
+                <p className="text-[rgb(var(--muted))]">{tech.role}</p>
               </div>
             ))}
           </div>

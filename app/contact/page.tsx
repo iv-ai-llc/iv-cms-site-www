@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import { useState } from "react";
-import { Send, Mail, MapPin, Phone } from "lucide-react";
+import { Send, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
 
@@ -49,10 +49,10 @@ export default function ContactPage() {
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-display-1 font-bold mb-6">
-              <span className="gradient-text">Get in Touch</span>
+              <span className="gradient-text">Contact Us</span>
             </h1>
             <p className="text-xl text-[rgb(var(--muted))]">
-              Have a question or want to work together? We'd love to hear from you.
+              Questions about IV-CMS? Need help getting started? We're here to help.
             </p>
           </div>
         </div>
@@ -175,10 +175,10 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-6">Get Support</h2>
                 <p className="text-[rgb(var(--muted))] mb-8">
-                  Reach out to us directly using the information below, or fill out
-                  the form and we'll get back to you within 24 hours.
+                  Have questions about features, pricing, or implementation?
+                  Our team typically responds within 24 hours.
                 </p>
               </div>
 
@@ -200,23 +200,13 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-[rgb(var(--muted))]">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-primary-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Location</h3>
+                    <h3 className="font-semibold mb-1">Documentation</h3>
                     <p className="text-[rgb(var(--muted))]">
-                      123 Business Street<br />
-                      City, State 12345
+                      Check out our docs for guides,<br />
+                      API reference, and tutorials.
                     </p>
                   </div>
                 </div>
