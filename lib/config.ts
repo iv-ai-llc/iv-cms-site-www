@@ -34,7 +34,7 @@ export const siteConfig = {
   navigation: [
     { href: "/", label: "Home" },
     { href: "/capabilities", label: "Features" },
-    { href: "/about", label: "About" },
+    { href: "/docs", label: "Docs" },
     { href: "/contact", label: "Contact" },
   ],
 
@@ -42,8 +42,8 @@ export const siteConfig = {
   footer: {
     product: [
       { label: "Features", href: "/capabilities" },
+      { label: "Documentation", href: "/docs" },
       { label: "Pricing", href: "/contact" },
-      { label: "API Docs", href: "/docs" },
     ],
     company: [
       { label: "About", href: "/about" },
