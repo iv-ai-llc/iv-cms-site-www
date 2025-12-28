@@ -108,14 +108,12 @@ export function Header() {
                 Sign In
               </a>
             )}
-            {siteConfig.platform.signUp && (
-              <a
-                href={siteConfig.platform.signUp}
-                className="hidden md:inline-flex px-4 py-2 text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors"
-              >
-                Get Started
-              </a>
-            )}
+            <a
+              href="/contact"
+              className="hidden md:inline-flex px-4 py-2 text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors"
+            >
+              Get Started
+            </a>
 
             {/* Mobile menu button */}
             <button
@@ -171,15 +169,13 @@ export function Header() {
                   Sign In
                 </a>
               )}
-              {siteConfig.platform.signUp && (
-                <a
-                  href={siteConfig.platform.signUp}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-base font-medium text-white bg-primary-500 hover:bg-primary-600 text-center transition-colors"
-                >
-                  Get Started
-                </a>
-              )}
+              <a
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 rounded-lg text-base font-medium text-white bg-primary-500 hover:bg-primary-600 text-center transition-colors"
+              >
+                Get Started
+              </a>
             </div>
           )}
         </div>

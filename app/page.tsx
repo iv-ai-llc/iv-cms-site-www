@@ -19,8 +19,8 @@ const staticContent = {
     title: "Content Management, Simplified",
     description:
       "A powerful headless CMS built for modern teams. Manage content across multiple sites with AI-powered editing, real-time collaboration, and seamless API delivery.",
-    ctaText: "Start Free",
-    ctaHref: "/sign-up",
+    ctaText: "Get Started",
+    ctaHref: "/contact",
     secondaryCta: {
       text: "View Features",
       href: "/capabilities",
@@ -107,8 +107,8 @@ const staticContent = {
     title: "Ready to Transform Your Content?",
     description:
       "Join teams who are already managing their content smarter with IV-CMS.",
-    buttonText: "Get Started Free",
-    buttonHref: "/sign-up",
+    buttonText: "Get Started",
+    buttonHref: "/contact",
   },
 };
 
