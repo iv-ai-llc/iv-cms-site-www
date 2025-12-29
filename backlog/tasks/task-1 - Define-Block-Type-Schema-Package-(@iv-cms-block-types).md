@@ -42,3 +42,23 @@ Create a new package with TypeScript interfaces and Zod schemas for all block ty
 7. Add package.json and tsconfig
 8. Update workspace configuration
 <!-- SECTION:PLAN:END -->
+
+## Implementation Notes
+
+<!-- SECTION:NOTES:BEGIN -->
+Created @iv-cms/block-types package with:
+
+- Base block schema with versioned type system (e.g., hero/v1)
+- 11 core block types: Hero, Features, Stats, Pillars, CTA, RichText, Image, Video, Code, List, Grid
+- Block registry with validation and migration support
+- Full TypeScript + Zod schemas for all blocks
+- Default data for each block type
+
+Files created:
+- packages/block-types/src/base.ts - Core interfaces and utilities
+- packages/block-types/src/blocks/*.ts - Individual block schemas
+- packages/block-types/src/registry.ts - Block registry implementation
+- packages/block-types/src/index.ts - Public API exports
+
+Build successful, ready for use in other packages.
+<!-- SECTION:NOTES:END -->
