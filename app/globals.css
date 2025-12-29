@@ -248,3 +248,179 @@
 .dark ::selection {
   @apply bg-primary-400/30 text-primary-300;
 }
+
+/* =============================================================================
+   Block Content Styles (from IV-CMS blocks)
+   ============================================================================= */
+
+/* Block content wrapper */
+.block-content {
+  @apply w-full;
+}
+
+/* Hero Block */
+.block-content .block-hero {
+  @apply container-wide py-16 md:py-24 lg:py-32 text-center;
+}
+
+.block-content .block-hero__title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6;
+  @apply text-[rgb(var(--foreground))];
+}
+
+.block-content .block-hero__subtitle {
+  @apply text-xl md:text-2xl mb-4 text-[rgb(var(--muted))];
+}
+
+.block-content .block-hero__description {
+  @apply max-w-2xl mx-auto text-lg text-[rgb(var(--muted))];
+}
+
+.block-content .block-hero__actions {
+  @apply flex flex-wrap justify-center gap-4 mt-8;
+}
+
+/* Features Block */
+.block-content .block-features {
+  @apply container-wide py-16 md:py-24;
+}
+
+.block-content .block-features__title {
+  @apply text-3xl md:text-4xl font-bold text-center mb-12;
+  @apply text-[rgb(var(--foreground))];
+}
+
+.block-content .block-features__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.block-content .block-features__item {
+  @apply card;
+}
+
+.block-content .block-features__icon {
+  @apply text-primary-500 mb-4;
+}
+
+.block-content .block-features__item-title {
+  @apply text-lg font-semibold mb-2 text-[rgb(var(--foreground))];
+}
+
+.block-content .block-features__item-description {
+  @apply text-[rgb(var(--muted))];
+}
+
+/* Stats Block */
+.block-content .block-stats {
+  @apply container-wide py-16 md:py-24 bg-[rgb(var(--surface))];
+}
+
+.block-content .block-stats__grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-8 text-center;
+}
+
+.block-content .block-stats__item {
+  @apply p-6;
+}
+
+.block-content .block-stats__value {
+  @apply text-4xl md:text-5xl font-bold text-primary-500 mb-2;
+}
+
+.block-content .block-stats__label {
+  @apply text-[rgb(var(--muted))];
+}
+
+/* CTA Block */
+.block-content .block-cta {
+  @apply container-wide py-16 md:py-24 text-center;
+  @apply bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-2xl;
+}
+
+.block-content .block-cta__title {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+}
+
+.block-content .block-cta__description {
+  @apply text-lg opacity-90 mb-8 max-w-2xl mx-auto;
+}
+
+.block-content .block-cta__actions {
+  @apply flex flex-wrap justify-center gap-4;
+}
+
+/* Rich Text Block */
+.block-content .block-rich-text {
+  @apply container-wide py-8 cms-content;
+}
+
+/* Image Block */
+.block-content .block-image {
+  @apply container-wide py-8;
+}
+
+.block-content .block-image__figure {
+  @apply mx-auto max-w-4xl;
+}
+
+.block-content .block-image__img {
+  @apply w-full h-auto rounded-lg;
+}
+
+.block-content .block-image__caption {
+  @apply text-center mt-4 text-sm text-[rgb(var(--muted))];
+}
+
+/* Video Block */
+.block-content .block-video {
+  @apply container-wide py-8;
+}
+
+.block-content .block-video__wrapper {
+  @apply relative aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden;
+}
+
+/* Code Block */
+.block-content .block-code {
+  @apply container-wide py-8;
+}
+
+.block-content .block-code__pre {
+  @apply bg-[rgb(var(--surface))] p-4 rounded-lg overflow-x-auto;
+  @apply border border-[rgb(var(--border))];
+}
+
+/* Pillars Block */
+.block-content .block-pillars {
+  @apply container-wide py-16 md:py-24;
+}
+
+.block-content .block-pillars__grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.block-content .block-pillars__item {
+  @apply card text-center p-8;
+}
+
+/* Grid Block */
+.block-content .block-grid {
+  @apply container-wide py-8;
+}
+
+.block-content .block-grid__grid {
+  @apply grid gap-6;
+}
+
+/* List Block */
+.block-content .block-list {
+  @apply container-wide py-8;
+}
+
+.block-content .block-list__list {
+  @apply list-disc pl-6 space-y-2;
+}
+
+.block-content .block-list__list--ordered {
+  @apply list-decimal;
+}

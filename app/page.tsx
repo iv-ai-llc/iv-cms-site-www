@@ -3,6 +3,7 @@ import { Features } from "@/components/sections/Features";
 import { Stats } from "@/components/sections/Stats";
 import { Pillars } from "@/components/sections/Pillars";
 import { CTA } from "@/components/sections/CTA";
+import { BlockRenderer } from "@/components/ui/BlockRenderer";
 import { fetchPage, isCMSConfigured } from "@/lib/cms";
 
 /**
@@ -115,6 +116,8 @@ const staticContent = {
 export default async function HomePage() {
   // Try to fetch content from CMS if configured
   let content = staticContent;
+  let blocks: unknown[] | undefined;
+  let renderedHtml: string | null = null;
 
   if (isCMSConfigured) {
     try {
@@ -122,11 +125,27 @@ export default async function HomePage() {
       if (cmsContent?.metadata) {
         content = { ...staticContent, ...cmsContent.metadata };
       }
+      // Check for block-based content
+      if (cmsContent?.blocks && cmsContent.blocks.length > 0) {
+        blocks = cmsContent.blocks;
+        renderedHtml = cmsContent.renderedHtml || null;
+      }
     } catch (error) {
       console.error("Failed to fetch CMS content:", error);
     }
   }
 
+  // If blocks are available, render them instead of static components
+  if (blocks && blocks.length > 0) {
+    return (
+      <BlockRenderer
+        blocks={blocks as Parameters<typeof BlockRenderer>[0]["blocks"]}
+        renderedHtml={renderedHtml}
+      />
+    );
+  }
+
+  // Fallback to static content
   return (
     <>
       <Hero

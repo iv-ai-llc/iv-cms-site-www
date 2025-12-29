@@ -41,6 +41,15 @@ export interface PageListItem {
   updatedAt: string;
 }
 
+/**
+ * Block definition for block-based content
+ */
+export interface Block {
+  id: string;
+  type: string;
+  data: Record<string, unknown>;
+}
+
 export interface Page {
   id: string;
   slug: string;
@@ -60,6 +69,9 @@ export interface Page {
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
+  // Block-based content (v1)
+  blocks?: Block[];
+  renderedHtml?: string | null;
 }
 
 export interface CollectionListItem {
