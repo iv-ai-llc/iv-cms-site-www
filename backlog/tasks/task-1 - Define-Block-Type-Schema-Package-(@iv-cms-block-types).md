@@ -5,7 +5,7 @@ status: In Progress
 assignee:
   - '@claude'
 created_date: '2025-12-29 15:17'
-updated_date: '2025-12-29 16:49'
+updated_date: '2025-12-29 17:03'
 labels:
   - backend
   - schema
@@ -22,12 +22,12 @@ Create a new package with TypeScript interfaces and Zod schemas for all block ty
 
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
-- [ ] #1 Create packages/block-types directory in iv-cms-platform
-- [ ] #2 Define base BlockSchema interface with type, version, and data fields
-- [ ] #3 Define core block types: HeroBlock, FeaturesBlock, StatsBlock, PillarsBlock, CTABlock, RichTextBlock, ImageBlock, VideoBlock, CodeBlock, ListBlock, GridBlock
-- [ ] #4 Each block schema includes Zod validation
-- [ ] #5 Export block type registry interface for custom blocks
-- [ ] #6 Add package to workspace and build configuration
+- [x] #1 Create packages/block-types directory in iv-cms-platform
+- [x] #2 Define base BlockSchema interface with type, version, and data fields
+- [x] #3 Define core block types: HeroBlock, FeaturesBlock, StatsBlock, PillarsBlock, CTABlock, RichTextBlock, ImageBlock, VideoBlock, CodeBlock, ListBlock, GridBlock
+- [x] #4 Each block schema includes Zod validation
+- [x] #5 Export block type registry interface for custom blocks
+- [x] #6 Add package to workspace and build configuration
 <!-- AC:END -->
 
 ## Implementation Plan
