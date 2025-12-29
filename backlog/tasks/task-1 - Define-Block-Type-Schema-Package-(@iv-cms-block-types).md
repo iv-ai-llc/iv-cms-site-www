@@ -5,7 +5,7 @@ status: In Progress
 assignee:
   - '@claude'
 created_date: '2025-12-29 15:17'
-updated_date: '2025-12-29 16:29'
+updated_date: '2025-12-29 16:49'
 labels:
   - backend
   - schema
@@ -29,3 +29,16 @@ Create a new package with TypeScript interfaces and Zod schemas for all block ty
 - [ ] #5 Export block type registry interface for custom blocks
 - [ ] #6 Add package to workspace and build configuration
 <!-- AC:END -->
+
+## Implementation Plan
+
+<!-- SECTION:PLAN:BEGIN -->
+1. Create feature/blocks-v1 branch in iv-cms-platform
+2. Create packages/block-types directory structure
+3. Define base block interfaces (BlockBase, BlockData)
+4. Create versioned type system (e.g., hero/v1)
+5. Define all core block schemas with Zod
+6. Create block registry interface
+7. Add package.json and tsconfig
+8. Update workspace configuration
+<!-- SECTION:PLAN:END -->
