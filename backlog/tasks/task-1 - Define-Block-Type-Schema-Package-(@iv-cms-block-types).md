@@ -1,7 +1,7 @@
 ---
 id: task-1
 title: Define Block Type Schema Package (@iv-cms/block-types)
-status: In Progress
+status: Done
 assignee:
   - '@claude'
 created_date: '2025-12-29 15:17'
